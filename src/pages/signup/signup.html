@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Register Account</ion-title>
+    </ion-navbar>
+    
+  </ion-header>
+
+
+  <ion-content>
+
+    <form (submit)="doRegister()">
+      <ion-list>
+
+        <ion-item>
+          <ion-label floating>Your Name</ion-label>
+          <ion-input type="text" [(ngModel)]="signup.yname" name="yname"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Your Email</ion-label>
+          <ion-input type="email" [(ngModel)]="signup.email" name="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Your Password</ion-label>
+          <ion-input type="password" [(ngModel)]="signup.password1" name="password1"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Confirm Password</ion-label>
+          <ion-input type="password" [(ngModel)]="signup.password2" name="password2"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Your Spending Password</ion-label>
+          <ion-input type="password" [(ngModel)]="signup.spassword1" name="spassword1"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Confirm Spending Password</ion-label>
+          <ion-input type="password" [(ngModel)]="signup.spassword2" name="spassword2"></ion-input>
+        </ion-item>
+
+        <div padding>
+
+          <button type="submit" ion-button color="primary" block>Proceed</button>
+        </div>
+
+      </ion-list>
+    </form>
+
+    <br>
+    <span>Already have an account?<a (click)="redirect()">Log In</a></span>
+  </ion-content>
